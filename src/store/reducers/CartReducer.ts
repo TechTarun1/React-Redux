@@ -23,8 +23,8 @@ const cartReducer = (state = initialState, action: any) => {
         };
       }
     case 'REMOVE_FROM_CART':
-      const productExist = state.items.find((item: any) => item.id === action.payload.id);
-      if (productExist) {
+      const productExist: any = state.items.find((item: any) => item.id === action.payload.id);
+      if (productExist && productExist.quantity === 1) {
         return {
           ...state,
           items: state.items.filter((item: any) => item.id !== action.payload),
