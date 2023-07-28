@@ -7,6 +7,7 @@ header {
     align-items: center !important;
     justify-content: space-between;
     background-color: #141414;
+    top: 0;
 }
 
 .logo {
