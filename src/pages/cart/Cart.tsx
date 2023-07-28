@@ -1,25 +1,25 @@
-import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import './Cart.css';
 import { addToCart, removeFromCart, clearCart } from '../../store/actions/CartActions';
+import { CartItem } from '../../types/StoreType';
 
 const Cart = () => {
 
-  const cartItems: any[] = useSelector((state: any) => state.cart.items)
+  const cartItems: CartItem[] = useSelector((state: any) => state.cart.items)
 
   const totalPrice = cartItems.reduce(
-    (price: number, item: any) => price + item.quantity * item.price,
+    (price: number, item: CartItem) => price + item.quantity * item.price,
     0
   );
 
   const dispatch = useDispatch();
 
-  const handleAddToCart = (item: any) => {
+  const handleAddToCart = (item: CartItem) => {
     dispatch(addToCart(item));
   };
 
-  const handleRemoveProduct = (item: any) => {
+  const handleRemoveProduct = (item: CartItem) => {
     dispatch(removeFromCart(item));
   };
 
@@ -37,7 +37,7 @@ const Cart = () => {
       </div>
       {cartItems.length === 0 && <div className='cart-items-empty'>No items in Cart.</div>}
       <div>
-        {cartItems.map((item: any) => {
+        {cartItems.map((item: CartItem) => {
 
           return (
             <div key={item.id} className='cart-items-list'>

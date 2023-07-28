@@ -4,18 +4,19 @@ import { useDispatch } from 'react-redux';
 import './Products.css';
 import { addToCart } from '../../store/actions/CartActions';
 import { productData } from '../../data/Data';
+import { CartItem } from '../../types/StoreType';
 
 const Products = () => {
 
   const dispatch = useDispatch();
 
-  const handleAddToCart = (item: any) => {
+  const handleAddToCart = (item: CartItem) => {
     dispatch(addToCart(item));
   };
 
   return (
     <div className='products'>
-      {productData.map((product: any) => {
+      {productData.map((product: CartItem) => {
 
         return (
           <div className='card' key={product.id}>

@@ -3,54 +3,63 @@ export const productData=[
         id:1,
         name:'Boat',
         price:999,
-        image:'Boat.jpg'
+        image:'Boat.jpg',
+        quantity:0
     },
     {
         id:2,
         name:'MI',
         price:299,
-        image:'JBL.jpg'
+        image:'JBL.jpg',
+        quantity:0
     },
     {
         id:3,
         name:'Bolt',
         price:399,
-        image:'Boss.jpg'
+        image:'Boss.jpg',
+        quantity:0
     },
     {
         id:4,
         name:'JBL',
         price:499,
-        image:'Boat.jpg'
+        image:'Boat.jpg',
+        quantity:0
     },
     {
         id:5,
         name:'Boss',
         price:599,
-        image:'Boss.jpg'
+        image:'Boss.jpg',
+        quantity:0
     },
     {
         id:6,
         name:'Fossil',
         price:699,
-        image:'JBL.jpg'
+        image:'JBL.jpg',
+        quantity:0
     },
     {
         id:7,
         name:'Apple',
         price:799,
-        image:'Boat.jpg'
+        image:'Boat.jpg',
+        quantity:0
     },
     {
         id:8,
         name:'Adam',
         price:999,
-        image:'Boss.jpg'
+        image:'Boss.jpg',
+        quantity:0
     },
     {
         id:9,
         name:'Berry',
         price:999,
-        image:'Boat.jpg'
+        image:'Boat.jpg',
+        quantity:0
     }
 ]
